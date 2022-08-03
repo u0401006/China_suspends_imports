@@ -29,7 +29,7 @@ with open(f'chinaBan-{today}.txt', 'a') as f:
 
     f.write(f'</table>')
 
-with open(f'china_suspends_import-{today}.txt', 'r') as f:
+with open(f'chinaBan-{today}.txt', 'r') as f:
     table = f.read()
 df = pd.read_html(table)[0]
 df.to_csv(f'china_suspends_import-{today}.csv', sep='\t', encoding='utf-8')
