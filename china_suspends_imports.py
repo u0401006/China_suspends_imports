@@ -33,4 +33,4 @@ with open(f'china_suspends_import-{today}.txt', 'r') as f:
     table = f.read()
 df = pd.read_html(table)[0]
 df.to_csv(f'china_suspends_import-{today}.csv', sep='\t', encoding='utf-8')
-os.remove(f'china_suspends_import-{today}.txt')
+os.remove(f'chinaBan-{today}.txt')
